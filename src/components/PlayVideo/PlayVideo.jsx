@@ -44,7 +44,6 @@ export default function PlayVideo({videoId}) {
     const details_url = `https://youtube.googleapis.com/youtube/v3/commentThreads?part=snippet%2Creplies&videoId=${videoId}&key=${API_KEY}`
     const {data} = await axios.get(details_url) 
     setCommentData(data.items)
-    console.log(data)
   }
 
   return (
@@ -90,7 +89,7 @@ export default function PlayVideo({videoId}) {
                       <h3>
                         {item.snippet.topLevelComment.snippet.authorDisplayName} <span>{moment(item.snippet.topLevelComment.snippet.publishedAt).fromNow()}</span>
                       </h3>
-                      <p>{item.snippet.topLevelComment.snippet.textDisplay}</p>
+                      <p>{item.snippet.topLevelComment.snippet.textOriginal}</p>
                       <div className="comment-action">
                         <img src={like} alt="Like" /> <span>{item.snippet.topLevelComment.snippet.likeCount}</span>
                         <img src={dislike} alt="Dislike" /> <span></span>

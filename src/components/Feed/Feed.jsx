@@ -26,7 +26,7 @@ export default function Feed({category}) {
       {feedData.length > 0 ? (
         feedData.map((item, index) => {
           return (
-            <Link key={item.id || index} to={`/video/${item.id}`} className='card'>
+            <Link key={item.id || index} to={`/video/${category}/${item.id}`} className='card'>
               <img src={item.snippet?.thumbnails.medium.url} alt={item.snippet?.title || ''} />
               <h2>{item.snippet?.title || 'Video Title'}</h2>
               <h3>{item.snippet?.channelTitle || 'Channel Name'}</h3>

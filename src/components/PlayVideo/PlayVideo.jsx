@@ -10,8 +10,11 @@ import { API_KEY } from '../../data'
 import axios from 'axios'
 import moment from 'moment'
 import { valueConverter } from '../../helper_functions'
+import { useParams } from 'react-router-dom'
 
-export default function PlayVideo({videoId}) {
+export default function PlayVideo() {
+
+  const {videoId} = useParams()
 
   const [apiData,setApiData] = useState(null)
   const [channelData,setChannelData] = useState(null)
@@ -19,7 +22,7 @@ export default function PlayVideo({videoId}) {
 
   useEffect(() => {
     fetchVideoData()
-  },[])
+  },[videoId])
 
   useEffect(() => {
     if (apiData) {

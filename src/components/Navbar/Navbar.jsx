@@ -9,11 +9,11 @@ import more_icon from '../../assets/more.png'
 import notification_icon from '../../assets/notification.png'
 import profile_icon from '../../assets/jack.png'
 
-export default function Navbar() {
+export default function Navbar({setSidebar}) {
   return (
     <nav className='flex-div'>
         <div className="nav-left flex-div">
-            <img src={menu_icon} alt="menu" />
+            <img src={menu_icon} alt="menu" onClick={() => setSidebar(prev=>!prev)} />
             <img src={logo} alt="logo" />
         </div>
 

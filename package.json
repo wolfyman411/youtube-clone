@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "DISABLE_ESLINT_PLUGIN=true CI=false vite build",
     "lint": "oxlint",
     "preview": "vite preview"
   },

@@ -9,10 +9,11 @@ import save from '../../assets/save.png'
 import jack from '../../assets/jack.png'
 import user_profile from '../../assets/user_profile.jpg'
 
-export default function PlayVideo() {
+export default function PlayVideo({videoId}) {
+
   return (
     <div className='play-video'>
-      <video src={video1} controls autoPlay muted></video>
+      <iframe src={`https://www.youtube.com/embed/${videoId}?autoplay=1`} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       <h3>Video Title</h3>
       <div className="play-video-info">
         <p>1523 views • 2 days ago</p>

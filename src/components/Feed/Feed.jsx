@@ -1,5 +1,6 @@
 import React from 'react'
 import './Feed.css'
+import {Link} from 'react-router-dom'
 import thumbnail1 from '../../assets/thumbnail1.png'
 import thumbnail2 from '../../assets/thumbnail2.png'
 import thumbnail3 from '../../assets/thumbnail3.png'
@@ -12,54 +13,54 @@ import thumbnail8 from '../../assets/thumbnail8.png'
 export default function Feed() {
   return (
     <div className="feed">
-        <div className='card'>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail1} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail2} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail3} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail4} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail5} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail6} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail7} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
-        <div className='card'>
+        </Link>
+        <Link to={`video/20/4521`} className='card'>
             <img src={thumbnail8} alt="" />
             <h2>Video Title</h2>
             <h3>Channel Name</h3>
             <p>1M views • 1 day ago</p>
-        </div>
+        </Link>
     </div>
   )
 }

@@ -15,43 +15,43 @@ import tom from '../../assets/tom.png'
 import megan from '../../assets/megan.png'
 import cameron from '../../assets/cameron.png'
 
-export default function Sidebar({sidebar}) {
+export default function Sidebar({sidebar, category, setCategory}) {
   return (
     <div className={`sidebar ${sidebar ? '' : 'small-sidebar'}`}>
       <div className="shortcut-links">
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(0)}>
             <img src={home} alt="home" />
             <p>Home</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(1)}>
             <img src={game_icon} alt="games" />
             <p>Gaming</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(2)}>
             <img src={automobiles} alt="automobiles" />
             <p>Automobiles</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(3)}>
             <img src={sports} alt="sports" />
             <p>Sports</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(4)}>
             <img src={entertainment} alt="entertainment" />
             <p>Entertainment</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(5)}>
             <img src={tech} alt="tech" />
             <p>Technology</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(6)}>
             <img src={music} alt="music" />
             <p>Music</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(7)}>
             <img src={blogs} alt="blogs" />
             <p>Blogs</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory(8)}>
             <img src={news} alt="news" />
             <p>News</p>
         </div>
@@ -59,23 +59,23 @@ export default function Sidebar({sidebar}) {
       </div>
       <div className="subscribed-list">
         <h3>Subscribed</h3>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory()}>
             <img src={jack} alt="jack" />
             <p>Jack</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory()}>
             <img src={simon} alt="simon" />
             <p>Simon</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory()}>
             <img src={tom} alt="tom" />
             <p>Tom</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory()}>
             <img src={megan} alt="megan" />
             <p>Megan</p>
         </div>
-        <div className="side-link">
+        <div className="side-link" onClick={() => setCategory()}>
             <img src={cameron} alt="cameron" />
             <p>Cameron</p>
         </div>

@@ -1,14 +1,21 @@
 .feed {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-column-gap: 16px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     margin-top: 15px;
 }
 
 .card img {
     width: 100%;
     border-radius: 5px;
+}
+
+.card {
+    transition: background-color ease-out 0.2s;
+    padding: 16px 8px;
+}
+
+.card:hover {
+    background-color: #d6d6d6;
 }
 
 .card h2 {

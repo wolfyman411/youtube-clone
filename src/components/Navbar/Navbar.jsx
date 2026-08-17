@@ -21,15 +21,15 @@ export default function Navbar({setSidebar}) {
         <div className="nav-middle flex-div">
           <div className="search-box flex-div">
             <input type="text" placeholder='Search' />
-            <img src={search_icon} alt="search" />
+            <img src={search_icon} alt="search" className='not-allowed'/>
           </div>
         </div>
 
         <div className="nav-right flex-div">
-          <img src={upload_icon} alt="upload" />
-          <img src={more_icon} alt="more" />
-          <img src={notification_icon} alt="notification" />
-          <img className="user-icon" src={profile_icon} alt="profile" />
+          <img src={upload_icon} alt="upload" className='not-allowed'/>
+          <img src={more_icon} alt="more" className='not-allowed'/>
+          <img src={notification_icon} alt="notification" className='not-allowed'/>
+          <img className="user-icon not-allowed" src={profile_icon} alt="profile"/>
         </div>
     </nav>
   )

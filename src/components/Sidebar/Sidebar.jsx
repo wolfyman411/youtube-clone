@@ -59,24 +59,24 @@ export default function Sidebar({sidebar, category, setCategory}) {
       </div>
       <div className="subscribed-list">
         <h3>Subscribed</h3>
-        <div className="side-link" onClick={() => setCategory()}>
-            <img src={jack} alt="jack" />
+        <div className="not-allowed side-link" onClick={() => setCategory()}>
+            <img src={jack} alt="jack" className='not-allowed'/>
             <p>Jack</p>
         </div>
-        <div className="side-link" onClick={() => setCategory()}>
-            <img src={simon} alt="simon" />
+        <div className="not-allowed side-link" onClick={() => setCategory()}>
+            <img src={simon} alt="simon" className='not-allowed'/>
             <p>Simon</p>
         </div>
-        <div className="side-link" onClick={() => setCategory()}>
-            <img src={tom} alt="tom" />
+        <div className="not-allowed side-link" onClick={() => setCategory()}>
+            <img src={tom} alt="tom" className='not-allowed'/>
             <p>Tom</p>
         </div>
-        <div className="side-link" onClick={() => setCategory()}>
-            <img src={megan} alt="megan" />
+        <div className="not-allowed side-link" onClick={() => setCategory()}>
+            <img src={megan} alt="megan" className='not-allowed'/>
             <p>Megan</p>
         </div>
-        <div className="side-link" onClick={() => setCategory()}>
-            <img src={cameron} alt="cameron" />
+        <div className="not-allowed side-link" onClick={() => setCategory()}>
+            <img src={cameron} alt="cameron" className='not-allowed'/>
             <p>Cameron</p>
         </div>
       </div>

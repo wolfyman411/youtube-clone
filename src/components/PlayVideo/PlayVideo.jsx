@@ -57,17 +57,17 @@ export default function PlayVideo() {
         <div className="play-video-info">
           <p>{valueConverter(apiData.statistics.viewCount)} views • {moment(apiData.snippet.publishedAt).fromNow()}</p>
           <div>
-              <span><img src={like} alt="Like" />{valueConverter(apiData.statistics.likeCount)}</span>
-              <span><img src={dislike} alt="Dislike" /></span>
-              <span><img src={share} alt="Share" />Share</span>
-              <span><img src={save} alt="Save" />Save</span>
+              <span><img src={like} alt="Like" className='not-allowed'/>{valueConverter(apiData.statistics.likeCount)}</span>
+              <span><img src={dislike} alt="Dislike" className='not-allowed'/></span>
+              <span><img src={share} alt="Share" className='not-allowed'/>Share</span>
+              <span><img src={save} alt="Save" className='not-allowed'/>Save</span>
           </div>
         </div>
         <hr />
         <div className="publisher">
           {channelData ? (
             <>
-              <img src={channelData.snippet.thumbnails.default.url} alt="Publisher" />
+              <img src={channelData.snippet.thumbnails.default.url} alt="Publisher" className='not-allowed'/>
               <div>
                   <p>{apiData.snippet.channelTitle}</p>
                   <span>{valueConverter(channelData.statistics.subscriberCount)} subscribers</span>
@@ -76,7 +76,7 @@ export default function PlayVideo() {
           ) : (
             null
           )}
-          <button>Subscribe</button>
+          <button className='not-allowed'>Subscribe</button>
         </div>
         <div className="vid-description">
           <p>{apiData.snippet.description.slice(0,250)}</p>
@@ -87,15 +87,15 @@ export default function PlayVideo() {
               commentData.map((item, index) => {
                 return (
                   <div className="comment" key={index}>
-                    <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="User" />
+                    <img src={item.snippet.topLevelComment.snippet.authorProfileImageUrl} alt="User" className='not-allowed'/>
                     <div>
                       <h3>
                         {item.snippet.topLevelComment.snippet.authorDisplayName} <span>{moment(item.snippet.topLevelComment.snippet.publishedAt).fromNow()}</span>
                       </h3>
                       <p>{item.snippet.topLevelComment.snippet.textOriginal}</p>
                       <div className="comment-action">
-                        <img src={like} alt="Like" /> <span>{item.snippet.topLevelComment.snippet.likeCount}</span>
-                        <img src={dislike} alt="Dislike" /> <span></span>
+                        <img src={like} alt="Like" className='not-allowed'/> <span>{item.snippet.topLevelComment.snippet.likeCount}</span>
+                        <img src={dislike} alt="Dislike" className='not-allowed'/> <span></span>
                       </div>
                     </div>
                   </div>
